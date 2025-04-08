@@ -1,0 +1,162 @@
+html{
+    animation: 10s infinite;
+    animation-name: background-animation;
+}
+
+h1{
+    color: rgb(179, 0, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 60pt;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60pt;
+    text-align: center;
+}
+
+.container{
+    animation: 10s infinite;
+    animation-name: container-background-animation;
+    border-radius: 40px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    min-width: 400px;
+    height: auto;
+    margin-left:10%;
+}
+
+
+.container > video{
+    border-radius: 60px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 30px;
+    margin-top: 25px;
+    padding:10px;
+    width: 70%;
+    height: calc(70% * 16 / 9);
+    /* 1920 x 1080 */
+}
+
+.container > a{
+    color: orange;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top:30px;
+    margin-bottom: 20px;
+}
+
+
+@keyframes background-animation {
+    0%{
+        background-color: rgb(176, 232, 248);
+    }
+    50%{
+        background-color: rgb(133, 206, 226);
+    }
+    100%{
+        background-color: rgb(176, 232, 248);
+    }
+}
+
+@keyframes container-background-animation {
+    0%{
+        background-color: rgb(1, 1, 21);
+    }
+    50%{
+        background-color: rgb(4, 4, 50);
+    }
+    100%{
+        background-color: rgb(1, 1, 21);
+    }
+}
+
+/* Make me some viewports for mobile screens */
+@media (max-width: 900px) {
+    .container {
+        width: 80%;
+        min-width: unset;
+        padding: 10px;
+    }
+
+    .container > video {
+        width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 40pt;
+    }
+
+    a {
+        font-size: 40pt;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 90%;
+        min-width: unset;
+        padding: 10px;
+    }
+
+    .container > video {
+        width: 99%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 30pt;
+    }
+
+    a {
+        width: 60%;
+        font-size: 25pt;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 100%;
+        min-width: unset;
+        padding: 10px;
+        margin-left: 0;
+        margin-right:0;
+        height: 400px;
+    }
+
+    .container > video {
+        width: 100%;
+        height: auto;
+    }
+
+    html{
+        margin:0;
+    }
+    body{
+        margin:0;
+    }
+
+    h1 {
+        font-size: 25pt;
+    }
+
+    a {
+        width: 60%;
+        font-size: 23pt;
+        margin-top: 300px;
+    }
+}
